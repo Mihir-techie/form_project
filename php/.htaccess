@@ -1,0 +1,9 @@
+Options -Indexes
+Order Allow,Deny
+Allow from all
+
+# Block direct access to config and class files
+<FilesMatch "^(config|Database|Validator|FileHandler|SubmissionRepo|AdminAuth)\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
